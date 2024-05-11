@@ -9,4 +9,5 @@ print 'digite seu sobrenome?'
 
 sobrenome = gets.chomp
 
-puts"hello #{nome} seu sobrenome é #{sobrenome}!"           #puts tambem mostra os dados     #{ }mostra a var no qual foi atribuido o "dados" ex nome e sobre nome
+puts"hello #{nome} seu sobrenome é #{sobrenome}!"           #puts tambem mostra os dados  
+#{ }mostra a var no qual foi atribuido o "dados" ex nome e sobre nome
