@@ -1,10 +1,10 @@
 
-names = ['Joãozinho', 'Manoel', 'juca']
+names = ['Joãozinho', 'Manoel', 'juca','manu']
 
-name = 'leonado'
+name = 'leonado', 'gi'   #será adicionado mais esses dados
 
-names.each do |name|
-    puts name  + 
+names.each do |name|  # a cada 'nomes' é adicionado o 'dados' descrito
+    puts name  + ' vou aparecer em cada nome'
 end 
 
 puts name
