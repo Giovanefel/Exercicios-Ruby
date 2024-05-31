@@ -39,11 +39,31 @@
  #  foo {puts"passando no bloco"}
 
  #6
-  def foo (name,&block)
-   @name= name
-   block.call
-  end
+ # def foo (name,&block)
+ #  @name= name
+ #  block.call
+ # end
 
-  foo('amigo')  {puts "hellow #{@name}"} 
+ # foo('amigo')  {puts "hellow #{@name}"} 
+
+
+ #7 
+      def foo (number,&block)
+         if block_given?
+            number.each do |key, value|
+               block.call(key,value)
+             end
+          end
+       end
+
+numbers = { 2 => 2, 3 => 3, 4 => 4}
+
+foo(numbers) do |key, value|
+   puts "#{key} * #{value} = #{key * value}"
+   puts "#{key} + #{value} = #{key + value}"
+   puts "___"
+end
+
+
  
 
