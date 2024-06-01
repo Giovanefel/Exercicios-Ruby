@@ -7,9 +7,25 @@
 #first_lambda.call
 
 #2
-first_lambda = -> (names) { names.each { |name  |puts name}}
+#first_lambda = -> (names) { names.each { |name  |puts name}}
 
-   names = ["nome1", "nome2", "nome3"]
+#   names = ["nome1", "nome2", "nome3"]
 
+# first_lambda.call(names)
 
-   first_lambda.call(names)
+#3
+
+my_lambda = lambda do |numbers|
+   index = 0
+   puts 'numero atual + proximo numero'
+   numbers.each do |number|
+      return if numbers[index] == numbers.last
+      puts "(#{numbers[index]}) + (#{numbers[index + 1]})"
+      puts numbers[index] + numbers[index + 1]
+
+      index +=1
+   end
+end 
+ 
+numbers = [1, 2, 3, 4]
+my_lambda.call(numbers) 
